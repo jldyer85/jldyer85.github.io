@@ -94,9 +94,15 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-typeOf('string');
-    
-    
+      if(value instanceof Array){
+        return 'array';
+    } else if(value === null){
+        return 'null';
+    } else if(value instanceof Date){
+        return 'date';
+    } else {
+        return typeof(value);
+    }
     // YOUR CODE ABOVE HERE //
 }
 

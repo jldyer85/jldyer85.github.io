@@ -213,29 +213,29 @@ function sortAscending(stringOne, stringTwo) {
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     //
-// if(stringOne > stringTwo){
-//     return 1
-// } else if(stringOne < stringTwo){
-//     return -1
-// } else {
-//     return 0
-// }
+    // if(stringOne > stringTwo){
+    //     return 1
+    // } else if(stringOne < stringTwo){
+    //     return -1
+    // } else {
+    //     return 0
+    // }
 
-// if(stringOne < stringTwo){
-//     return -1;
-// } else if (stringOne > stringTwo){
-//     return 1;
-// } else {
-//     return 0;
-// }
-
-if(stringOne === stringTwo){
-    return 0;
+if(stringOne < stringTwo){
+    return -1;
 } else if (stringOne > stringTwo){
     return 1;
 } else {
-    return -1;
+    return 0;
 }
+
+// if(stringOne === stringTwo){
+//     return 0;
+// } else if (stringOne > stringTwo){
+//     return 1;
+// } else {
+//     return -1;
+// }
     // YOUR CODE ABOVE HERE //
 }
 

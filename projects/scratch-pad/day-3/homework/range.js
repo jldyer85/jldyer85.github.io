@@ -23,9 +23,22 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
-    
+    //create empty arr to store range
+   var rangeArr = [];
+   
+   //for loop from start to end and push into array
+    for (var i = start; i >= end; i--){
+        rangeArr.push(i);
+      } 
+      
+      
+    for(var i = start; i <= end; i++){
+       rangeArr.push(i);
+        }
+  
+  
+     //return array with range 
+    return rangeArr;
     
     // YOUR CODE GOES ABOVE HERE //
 }
