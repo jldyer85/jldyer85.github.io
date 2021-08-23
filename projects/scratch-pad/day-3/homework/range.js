@@ -26,12 +26,12 @@ function range(start, end) {
     //create empty arr to store range
    var rangeArr = [];
    
-   //for loop from start to end and push into array
+   //for loop from start to end and push into array if start is >= end//
     for (var i = start; i >= end; i--){
         rangeArr.push(i);
       } 
       
-      
+    //for loop from start to end if end is <= to start & push into array //
     for(var i = start; i <= end; i++){
        rangeArr.push(i);
         }

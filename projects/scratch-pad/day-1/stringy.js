@@ -27,7 +27,7 @@ function length(string) {
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
 //use dot toLowerCase() method to enforce lowercase on param/arg
-return string.toLowerCase(); 
+    return string.toLowerCase(); 
 
     // YOUR CODE ABOVE HERE //
 }
@@ -37,8 +37,8 @@ return string.toLowerCase();
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
-//use dot toUpperCase() method to enforce lowercase on param/arg
-return string.toUpperCase();
+//use dot toUpperCase() method to enforce lowercase on arg
+    return string.toUpperCase();
 
     // YOUR CODE ABOVE HERE //
 }
@@ -59,12 +59,10 @@ return string.toUpperCase();
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
     //use dot replaceAll method to replace all spaces in string w/ dashes & enforce toLowerCase
-return string.replace(/\W+/g, '-').toLowerCase();
-// let newString = string.replaceAll(' ', '-');
-//     return newString.toLowerCase();
+    return string.replace(/\W+/g, '-').toLowerCase();
 
-// return string.split('-');
-// return string.replace(' ', '-');
+// let newString = string.replaceAll(' ', '-'); //=> this code passed in preview but not in terminal. Terminal said replaceALl not a function//
+//     return newString.toLowerCase();
 
     // YOUR CODE ABOVE HERE //
 }
@@ -84,11 +82,11 @@ return string.replace(/\W+/g, '-').toLowerCase();
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
     //if first character or string is equal to char argument return true. even if char is lower OR upper case
-if(string[0] == char.toLowerCase() || string[0] == char.toUpperCase()){
-    return true;
-} else {
-    return false;
-};
+    if(string[0] == char.toLowerCase() || string[0] == char.toUpperCase()){
+        return true;
+    } else {
+        return false;
+    };
 
 
     // YOUR CODE ABOVE HERE //
@@ -108,12 +106,12 @@ if(string[0] == char.toLowerCase() || string[0] == char.toUpperCase()){
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-//if last character of string == to char arg return true. insensitive case.
-if(string[string.length - 1] == char.toLowerCase() || string[string.length - 1] == char.toUpperCase()){
+//if last character of string === to char arg return true. insensitive case.
+    if(string[string.length - 1] === char.toLowerCase() || string[string.length - 1] === char.toUpperCase()){
     return true;
-} else {
-    return false;
-};
+    } else {
+        return false;
+    };
 
 
     // YOUR CODE ABOVE HERE //
@@ -127,7 +125,7 @@ if(string[string.length - 1] == char.toLowerCase() || string[string.length - 1] 
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 //concatenate two strings using + operator
-return stringOne + stringTwo;
+    return stringOne + stringTwo;
 
 
     // YOUR CODE ABOVE HERE //
@@ -184,13 +182,6 @@ function longest(stringOne, stringTwo) {
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     //if stringOne is higher in alphabet than stringTwo return 1, if vice versa return -1, if equal return 0
-// if(stringOne < stringTwo){
-//     return 1
-// } else if(stringOne > stringTwo){
-//     return -1
-// } else {
-//     return 0
-// }
     if (stringOne > stringTwo){
         return -1;
     } else if (stringOne < stringTwo){
@@ -213,29 +204,13 @@ function sortAscending(stringOne, stringTwo) {
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     //
-    // if(stringOne > stringTwo){
-    //     return 1
-    // } else if(stringOne < stringTwo){
-    //     return -1
-    // } else {
-    //     return 0
-    // }
-
-if(stringOne < stringTwo){
-    return -1;
-} else if (stringOne > stringTwo){
-    return 1;
-} else {
-    return 0;
-}
-
-// if(stringOne === stringTwo){
-//     return 0;
-// } else if (stringOne > stringTwo){
-//     return 1;
-// } else {
-//     return -1;
-// }
+    if(stringOne < stringTwo){
+        return -1;
+        } else if (stringOne > stringTwo){
+            return 1;
+        } else {
+            return 0;
+        }
     // YOUR CODE ABOVE HERE //
 }
 

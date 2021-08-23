@@ -35,6 +35,10 @@
 
 function greeter(hour) {
     // YOUR CODE BELOW HERE //
+    
+/*create if else if statement to print to log time of day greeting dependent on 24 hour cycle.
+    - Must use && operator to create condiitional range*/
+
     if(hour >= 0 && hour <= 11){
         console.log('Good Morning!');
     } else if (hour >= 12 && hour <= 16){

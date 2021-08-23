@@ -14,6 +14,8 @@
  */
 function isArray(value) {
     // YOUR CODE BELOW HERE //
+    
+    //create if statement with Array.isArray method to test whether T/F
     if(Array.isArray(value)){
         return true;
     } else {
@@ -35,6 +37,8 @@ function isArray(value) {
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
+    
+//create if statement to return false if value is array, null, date and true if it's a true obj
     if(value instanceof Array){
         return false;
     } else if(value === null){
@@ -58,6 +62,8 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
+    
+//create if statement return false if value is null or date but true if value is array OR obj.
     if(value === null){
         return false;
     } else if(value instanceof Date){
@@ -94,6 +100,8 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
+    
+//return all typeof values as strings. must create if statement to account for null, array, date.
       if(value instanceof Array){
         return 'array';
     } else if(value === null){

@@ -12,7 +12,7 @@
  */
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
-  
+ //loop through array, incr by 1, console log array.//
   for (var i = 0; i < array.length; i++){
     console.log(array[i]);
   }
@@ -27,6 +27,7 @@ function printArrayValues(array) {
  */
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
+  //loop through array in reverse, console log reversed array//
   for (var i = array.length - 1; i >= 0; i--){
     console.log(array[i]);
   }
@@ -41,6 +42,8 @@ function printArrayValuesInReverse(array) {
  */
 function getObjectKeys(object) {
   // YOUR CODE BELOW HERE //
+/*The Object.keys() method returns an array of a given object's own enumerable property names.
+  - iterated in the same order that a normal loop would.*/
   return Object.keys(object);
   
   
@@ -54,7 +57,7 @@ function getObjectKeys(object) {
  */
 function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
+  //for in loop the object and console log key
  for (var key in object) {
    console.log(key);
  }
@@ -68,6 +71,7 @@ function printObjectKeys(object) {
  */
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
+//Object.values() method returns values of an object in an array//
  return Object.values(object);
   
   
@@ -80,6 +84,7 @@ function getObjectValues(object) {
  */
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
+  //for in loop through object and console log the its values
   for (var key in object){
     console.log(object[key]);
   }
@@ -94,6 +99,7 @@ function printObjectValues(object) {
  */
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
+  
   return Object.keys(object).length;
   
   

@@ -13,6 +13,7 @@
  */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
+    //return function that takes a value and compares if its greater than base arg//
     return function(value){
         return value > base
     };
@@ -30,6 +31,7 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
+        //return function that takes a value and compares if its less than base arg//
     return function(value){
         return value < base
     };
@@ -44,7 +46,9 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
+    //return function that takes a string
     return function(string){
+        //if first char in string === startsWith arg, return true, add .toUpperCase method so all args are capitalized//
         if(string[0].toUpperCase() === startsWith.toUpperCase()){
             return true;
         } else {
@@ -64,6 +68,7 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
+    //if last char in string === endsWith arg, return true, add .toUpperCase method so all args are capitalized//
     return function(string){
         if(string[string.length - 1].toUpperCase() === endsWith.toUpperCase()){
             return true;
@@ -84,7 +89,9 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
+    //create empty arr to store results
     var newArray = [];
+    //loop over strings & push modified strings into new arr//
     for(var i = 0; i < strings.length; i++){
         newArray.push(modify(strings[i]));
     }

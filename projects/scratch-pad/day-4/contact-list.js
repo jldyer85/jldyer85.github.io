@@ -35,7 +35,12 @@
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-
+        var contactObj = {
+            id: id,
+            nameFirst: nameFirst,
+            nameLast: nameLast,
+        }
+    return contactObj;
 } 
 
 
@@ -43,17 +48,50 @@ function makeContactList() {
     /*
      * You need something here to hold contacts. See length api for a hint:
      */
-    var contacts;
+    var contacts = []; //=> empty array to store contacts
     
     return {
         // we implemented the length api for you //
         length: function() {
             return contacts.length;
+        },
+        //addConcct function using push method to add contact to contacts arr//
+        addContact: function(contactObj) {
+            return contacts.push(contactObj);
+        },
+        /* findContact function using for loop to pull full name into new var contactCard 
+            - then if statement contact card matches full name argue return result of contact obj */
+        findContact: function(fullName) {
+            var result;
+            for(var i = 0; i < contacts.length; i++){
+            var contactCard = contacts[i];
+            var contactCardFullName = `${contactCard.nameFirst} ${contactCard.nameLast}`
+            if(contactCardFullName === fullName){
+                result = contactCard
+            };
+            };
+             return result;
+        },
+        //removedContact function using pop method to remove contact from array//
+        removeContact: function(contactObj) {
+            return contacts.pop();
+        },
+        /*printAllContactNames function storing results in empty string. Then run for loop to iterate through contacts, but if
+        contact is last contact, result returns just full name, no new line. Else return all full names with new line break after each */
+        printAllContactNames: function(){
+            var result = ''
+            for(var i = 0; i < contacts.length; i++){
+            var fullName = `${contacts[i].nameFirst} ${contacts[i].nameLast}`;
+            if(contacts.length - 1 === i){
+                result += `${fullName}`;
+            } else {
+                result += `${fullName}\n`;
+            }
+            }
+            return result;
         }
-    }
+    };
 }
-
-
 
 
 // YOUR CODE GOES ABOVE HERE //
